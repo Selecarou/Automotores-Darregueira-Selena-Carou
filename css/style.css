@@ -1,0 +1,257 @@
+/*estilos-header-index*/
+header div nav div a .logo {
+  width: 300px;
+}
+header div ul li .nav-link {
+  color: whitesmoke;
+}
+
+/*estilos-main-index*/
+.container-fluid {
+  height: 22vh;
+}
+.container-fluid section h1 {
+  color: #d3ae6f;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.container-fluid section p {
+  text-align: center;
+  color: grey;
+}
+
+div .imagen-principal {
+  object-fit: cover;
+  width: 100%;
+  margin-top: 90px;
+}
+
+/*estilos-footer-index*/
+footer p {
+  color: whitesmoke;
+  text-align: center;
+}
+
+/*mq-desktop-index*/
+@media screen and (min-width: 1024px) {
+  .container-fluid section p {
+    text-align: center;
+    font-size: 20px;
+  }
+  div .imagen-principal {
+    display: flex;
+    width: 100%;
+    margin-top: 0px;
+  }
+}
+/*estilos-main-autos*/
+.main-autos-camionetas {
+  margin: 0px;
+  height: 20vh;
+  display: grid;
+  grid-template-rows: repeat(3, 95%);
+  grid-template-columns: 2fr;
+  row-gap: 20px;
+}
+.main-autos-camionetas div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-autos-camionetas div h1 {
+  color: #d3ae6f;
+  text-align: center;
+}
+.main-autos-camionetas .imagen-uno {
+  display: none;
+}
+.main-autos-camionetas .imagen-cinco {
+  display: none;
+}
+.main-autos-camionetas .imagen-tres {
+  display: grid;
+  grid-row: span 2;
+  width: 100%;
+  object-fit: cover;
+  margin-top: 60px;
+}
+.main-autos-camionetas .imagen-dos {
+  display: grid;
+  grid-row: span 2;
+}
+
+/*mq-desktop-autos*/
+@media screen and (min-width: 1024px) {
+  .main-autos-camionetas {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40% 40% 40%;
+    margin: 0%;
+    height: 40vh;
+  }
+  .main-autos-camionetas .imagen-tres {
+    display: block;
+    grid-row: span 2;
+  }
+  .main-autos-camionetas .imagen-cinco {
+    display: block;
+  }
+  .main-autos-camionetas .imagen-uno {
+    grid-row: span 2;
+  }
+  .main-autos-camionetas .imagen-dos {
+    grid-row: span 2;
+    width: 400px;
+    margin-top: 60px;
+  }
+  .main-autos-camionetas .imagen-cuatro {
+    grid-row: span 4;
+    margin-bottom: 20px;
+    margin-right: 50px;
+  }
+  .main-autos-camionetas .imagen-cinco {
+    grid-row: span 2;
+    width: 400px;
+    margin-top: 240px;
+  }
+  .main-autos-camionetas .imagen-seis {
+    grid-row: span 2;
+  }
+}
+/*estilos-main-camionetas*/
+.main-autos-camionetas {
+  margin: 0px;
+  height: 20vh;
+  display: grid;
+  grid-template-rows: repeat(3, 95%);
+  grid-template-columns: 2fr;
+  row-gap: 20px;
+}
+.main-autos-camionetas div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-autos-camionetas div h1 {
+  color: #d3ae6f;
+  text-align: center;
+}
+.main-autos-camionetas .imagen-uno {
+  display: none;
+}
+.main-autos-camionetas .imagen-cinco {
+  display: none;
+}
+.main-autos-camionetas .imagen-tres {
+  display: grid;
+  grid-row: span 2;
+  width: 100%;
+  object-fit: cover;
+  margin-top: 60px;
+}
+.main-autos-camionetas .imagen-dos {
+  display: grid;
+  grid-row: span 2;
+}
+
+/*mq-desktop-camionetas*/
+@media screen and (min-width: 1024px) {
+  .main-autos-camionetas {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40% 40% 40%;
+    margin: 0%;
+    height: 40vh;
+  }
+  .main-autos-camionetas .imagen-tres {
+    display: block;
+    grid-row: span 2;
+  }
+  .main-autos-camionetas .imagen-cinco {
+    display: block;
+  }
+  .main-autos-camionetas .imagen-uno {
+    grid-row: span 2;
+  }
+  .main-autos-camionetas .imagen-dos {
+    grid-row: span 2;
+    width: 400px;
+    margin-top: 60px;
+  }
+  .main-autos-camionetas .imagen-cuatro {
+    grid-row: span 4;
+    margin-bottom: 20px;
+    margin-right: 50px;
+  }
+  .main-autos-camionetas .imagen-cinco {
+    grid-row: span 2;
+    width: 400px;
+    margin-top: 240px;
+  }
+  .main-autos-camionetas .imagen-seis {
+    grid-row: span 2;
+  }
+}
+/*estilos-main-formasdepago*/
+.main-formas-de-pago {
+  height: 10vh;
+}
+.main-formas-de-pago section h1 {
+  color: #d3ae6f;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+section .card {
+  display: flex;
+  display: inline-block;
+  color: whitesmoke;
+  margin-left: 18px;
+  margin-right: 10px;
+}
+
+/*mq-desktop-formas-de-pago*/
+@media screen and (min-width: 1024px) {
+  section .card {
+    margin-left: 35px;
+    margin-right: 25px;
+  }
+}
+/*estilos-main-local*/
+.main-local {
+  height: 25vh;
+}
+.main-local section h1 {
+  color: #d3ae6f;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.main-local section p {
+  text-align: center;
+  color: grey;
+  font-size: 15px;
+}
+
+.local-mapa {
+  display: flex;
+}
+
+/*mq-desktop-local*/
+@media screen and (min-width: 1024px) {
+  .main-local section p {
+    text-align: center;
+    color: grey;
+    font-size: 20px;
+  }
+  .local-mapa {
+    display: flex;
+    justify-content: center;
+  }
+}
+* {
+  background-color: black;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,42 @@
+@import "variables";
+
+/*estilos-main-local*/
+.main-local{
+    height: 25vh;
+    section{
+        h1{
+            color: $color-principal;
+            margin-top: 0px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            color: $color-secundario;
+            font-size: 15px;
+        }
+}
+}
+
+.local-mapa{
+    display: flex;
+}
+
+/*mq-desktop-local*/
+
+@media screen and (min-width:1024px){
+    .main-local{
+        section{
+            p{
+                text-align: center;
+                color: $color-secundario;
+                font-size: 20px;
+            }
+        }
+    } 
+
+    .local-mapa{
+        display: flex;
+        justify-content: center;
+    }
+}

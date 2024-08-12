@@ -1,0 +1,17 @@
+//imports//
+
+@import "utilidades/home";
+@import "utilidades/autos";
+@import "utilidades/camionetas";
+@import "utilidades/formasdepago";
+@import "utilidades/local";
+@import "utilidades/variables";
+@import "utilidades/mixin";
+
+//estilos generales//
+
+*{
+    background-color: $color-general;
+    box-sizing: border-box;
+}
+

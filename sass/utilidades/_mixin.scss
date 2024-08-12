@@ -1,0 +1,8 @@
+@mixin grid{
+    margin: 0px;
+    height: 20vh;
+    display: grid;
+    grid-template-rows: repeat(3, 95%);
+    grid-template-columns: 2fr;
+    row-gap: 20px;
+}
