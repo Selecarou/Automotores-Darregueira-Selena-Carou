@@ -1,8 +1,9 @@
-@mixin grid{
-    margin: 0px;
-    height: 20vh;
-    display: grid;
-    grid-template-rows: repeat(3, 95%);
-    grid-template-columns: 2fr;
-    row-gap: 20px;
+
+@mixin flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    padding: 10px;
 }

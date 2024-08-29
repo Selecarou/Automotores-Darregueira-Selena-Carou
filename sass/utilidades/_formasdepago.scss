@@ -1,29 +1,44 @@
 @import "variables";
 
+/*estilos-body-formas-de-pago*/
+
+body{
+    background-color: black;
+}
+
 /*estilos-main-formasdepago*/
 
 .main-formas-de-pago{
-    height: 10vh;
     section{
         h1{
             color: $color-principal;
-            margin-top: 0px;
             margin-bottom: 20px;
             text-align: center;
         }
-}
+    }
 }
 
 section{
     .card{
         display: flex;
         display: inline-block;
+        background-color: $color-general;
         color: $color-terciario;
+        border: solid, $color-terciario;
         margin-left: 18px;
         margin-right: 10px;
+        margin-bottom: 20px;
     }
 }
 
+/*mq-tablets-formas-de-pago*/
+@media (min-width: 768px) {
+    section{
+        .card{
+            margin-left: 15px;
+        }
+    }
+  }
 
 /*mq-desktop-formas-de-pago*/
 

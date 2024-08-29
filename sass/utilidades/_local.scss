@@ -1,12 +1,17 @@
 @import "variables";
 
+/*estilos-body-local*/
+
+body{
+    background-color: black;
+}
+
 /*estilos-main-local*/
+
 .main-local{
-    height: 25vh;
     section{
         h1{
             color: $color-principal;
-            margin-top: 0px;
             margin-bottom: 20px;
             text-align: center;
         }
@@ -20,7 +25,18 @@
 
 .local-mapa{
     display: flex;
+    margin-left: 5px;
+    margin-right: 5px;
 }
+
+/*mq-tablets-local*/
+
+@media (min-width: 768px) {
+    .local-mapa{
+        display: flex;
+        justify-content: center;
+    }
+  }
 
 /*mq-desktop-local*/
 

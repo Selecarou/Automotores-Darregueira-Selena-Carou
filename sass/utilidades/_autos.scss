@@ -1,89 +1,63 @@
 @import "variables";
 @import "mixin";
 
+
+/*estilos-body-autos*/
+body{
+  margin: 0;
+  padding: 0;
+  background-color: $color-general;
+}
+
 /*estilos-main-autos*/
-
-.main-autos-camionetas{
-    @include grid;
-
-    div{
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    div{
-        h1{
-            color: $color-principal;
-            text-align: center;
-        }
-    }
-
-    .imagen-uno{
-        display: none;
-    }
-
-    .imagen-cinco{
-        display: none;
-    }
-
-    .imagen-tres{
+.gallery-container{
+    @include flex;
+      h1{
+        color: $color-principal;
+      }
+      .gallery-grid{
         display: grid;
-        grid-row: span 2;
+        gap: 10px;
         width: 100%;
-        object-fit: cover;
-        margin-top: 60px;
+        height: calc(100vh - 60px);
+          .gallery-item{
+            position: relative;
+            overflow: hidden;
+              img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
     }
+}
 
-    .imagen-dos{
-        display: grid;
-        grid-row: span 2;
+/*mq-mobile-autos*/
+@media (max-width: 767px) {
+  .gallery-container{
+    .gallery-grid {
+      grid-template-columns: 1fr; 
+      grid-template-rows: repeat(6, 1fr); 
+    } 
+  }
+}
+
+/*mq-tablets-autos*/
+@media (min-width: 768px) {
+  .gallery-container{
+    .gallery-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
     }
-
+  }
 }
 
 /*mq-desktop-autos*/
-
-@media screen and (min-width: 1024px) {
-    .main-autos-camionetas{
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 40% 40% 40%;
-        margin: 0%;
-        height: 40vh;
-
-        .imagen-tres{
-            display: block;
-            grid-row: span 2;
-        }
-        .imagen-cinco{
-            display: block;
-        }
-        .imagen-uno{
-            grid-row: span 2;
-        }
-        .imagen-dos{
-            grid-row: span 2;
-            width: 400px;
-            margin-top: 60px;
-        }
-        .imagen-cuatro{
-            grid-row: span 4;
-            margin-bottom: 20px;
-            margin-right: 50px;
-        }
-        .imagen-cinco{
-            grid-row: span 2;
-            width: 400px;
-            margin-top: 240px;
-        }
-        .imagen-seis{
-            grid-row: span 2;
-        }
+@media (min-width: 1024px) {
+  .gallery-container{
+    .gallery-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr); 
     }
+  }
 }
-
-
-    
-

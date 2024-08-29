@@ -1,85 +1,63 @@
 @import "variables";
 @import "mixin";
 
-/*estilos-main-camionetas*/
-
-.main-autos-camionetas{
-    @include grid;
-
-    div{
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    div{
+/*estilos-body-camionetas*/
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $color-general;
+  }
+  
+  /*estilos-main-camionetas*/
+  .gallery-container{
+      @include flex;
         h1{
-            color: $color-principal;
-            text-align: center;
+          color: $color-principal;
         }
+        .gallery-grid{
+          display: grid;
+          gap: 10px;
+          width: 100%;
+          height: calc(100vh - 60px);
+            .gallery-item{
+              position: relative;
+              overflow: hidden;
+                img{
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+              }
+          }
+      }
+  }
+  
+  /*mq-mobile-camionetas*/
+  @media (max-width: 767px) {
+    .gallery-container{
+      .gallery-grid {
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(6, 1fr); 
+      } 
     }
-
-    .imagen-uno{
-        display: none;
+  }
+  
+  /*mq-tablets-camionetas*/
+  @media (min-width: 768px) {
+    .gallery-container{
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
     }
-
-    .imagen-cinco{
-        display: none;
+  }
+  
+  /*mq-desktop-camionetas*/
+  @media (min-width: 1024px) {
+    .gallery-container{
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr); 
+      }
     }
+  }
 
-    .imagen-tres{
-        display: grid;
-        grid-row: span 2;
-        width: 100%;
-        object-fit: cover;
-        margin-top: 60px;
-    }
-
-    .imagen-dos{
-        display: grid;
-        grid-row: span 2;
-    }
-
-}
-
-/*mq-desktop-camionetas*/
-
-@media screen and (min-width: 1024px) {
-    .main-autos-camionetas{
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 40% 40% 40%;
-        margin: 0%;
-        height: 40vh;
-
-        .imagen-tres{
-            display: block;
-            grid-row: span 2;
-        }
-        .imagen-cinco{
-            display: block;
-        }
-        .imagen-uno{
-            grid-row: span 2;
-        }
-        .imagen-dos{
-            grid-row: span 2;
-            width: 400px;
-            margin-top: 60px;
-        }
-        .imagen-cuatro{
-            grid-row: span 4;
-            margin-bottom: 20px;
-            margin-right: 50px;
-        }
-        .imagen-cinco{
-            grid-row: span 2;
-            width: 400px;
-            margin-top: 240px;
-        }
-        .imagen-seis{
-            grid-row: span 2;
-        }
-    }
-}
